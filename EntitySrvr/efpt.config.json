@@ -1,0 +1,193 @@
+﻿{
+   "CodeGenerationMode": 3,
+   "ContextClassName": "SOSContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": true,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "EntitySrvr",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[Actions]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Activities]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Certificates]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Certtypes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Changes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[company]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Country]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[countrycodes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[County]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[emailaddress]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[entitytypes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[erslog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ERSManageQ]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ERSQueue]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Fees]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[filmcodes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[FutureAct]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[FutureProcessed]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Image]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[letter]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[lettertype]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[NewArpOfficer]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[NewArpOfficerChanges]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[NewArpOfficerDeleted]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[NewArponline]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[NextID]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Officers]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Offtypes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[OnlineFilings]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Payments]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[People]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RACPOCReturn]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[returnletterlinks]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Returnletters]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[returnlettersubjects]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ReturnLetterText]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Searchlog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[states]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[XStatus]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "sossqlprd1.SOS.dbo",
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": false,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoConstructor": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false,
+   "UseT4": false
+}
