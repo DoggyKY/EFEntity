@@ -32,7 +32,7 @@ namespace EFEntityMgr
             bsActs.DataSource = acts;
             //var ata = new ActionsTableAdapter();
             var atd = await Task.Run(() => ActionsM.GetActions() );
-            var etd = await Task.Run(() => EntitytypesM.GetEntitytypes());
+            var etd = Task.Run(() => EntitytypesM.GetEntitytypes()).GetAwaiter().GetResult();
          }
 
        
