@@ -30,7 +30,7 @@ namespace EFEntityMgr
             offs = await EntityM.GetOfficersByCompanyID(ctxact, bgrr.Id, bgrr.Comptype, bgrr.Compseq);
             bsCompany.DataSource = bgrr;
             bsActs.DataSource = acts;
-            //var ata = new ActionsTableAdapter();
+            //var ata = new ActionsTableAdapter()
             var atd = await Task.Run(() => ActionsM.GetActions() );
             var etd = Task.Run(() => EntitytypesM.GetEntitytypes()).GetAwaiter().GetResult();
          }
