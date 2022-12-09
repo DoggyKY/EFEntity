@@ -31,8 +31,8 @@ namespace EFEntityMgr
             bsCompany.DataSource = bgrr;
             bsActs.DataSource = acts;
             //var ata = new ActionsTableAdapter();
-            var atd = ActionsM.GetActions();
-            var etd = EntitytypesM.GetEntitytypes();
+            var atd = await Task.Run(() => ActionsM.GetActions() );
+            var etd = await Task.Run(() => EntitytypesM.GetEntitytypes());
          }
 
        
