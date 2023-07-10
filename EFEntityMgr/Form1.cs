@@ -31,15 +31,17 @@ namespace EFEntityMgr
             bsCompany.DataSource = bgrr;
             bsActs.DataSource = acts;
             //var ata = new ActionsTableAdapter()
-            var atd = await Task.Run(() => ActionsM.GetActions() );
+            var atd = await Task.Run(() => ActionsM.GetActions());
             var etd = Task.Run(() => EntitytypesM.GetEntitytypes()).GetAwaiter().GetResult();
-         }
+            var aoc = await AocM.GetAOCCodes();
+            bsaocs.DataSource = aoc;
+        }
 
-       
+
 
         private async void button2_Click(object sender, EventArgs e)
         {
-           bsActs.EndEdit();
+            bsActs.EndEdit();
             await ctxact.SaveChangesAsync();
         }
 

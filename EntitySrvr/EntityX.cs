@@ -52,7 +52,7 @@ namespace EntitySrvr.Models
         {
             get
             {
-                StringBuilder sb = new(4);
+                StringBuilder sb = new();
                 if (Oname != null) sb.Append(Oname + " ");
                 else
                 {
@@ -75,7 +75,7 @@ namespace EntitySrvr.Models
         {
             using (var ctx = new SOSContext())
             {
-                Offtype = ctx.Offtypes.Select(o => o).ToDictionaryAsync(o => o.Office).GetAwaiter().GetResult();
+                Offtype =  ctx.Offtypes.Select(o => o).ToDictionaryAsync(o => o.Office).GetAwaiter().GetResult();
             }
 
         }
@@ -90,7 +90,7 @@ namespace EntitySrvr.Models
         {
             get
             {
-                StringBuilder sb = new(4);
+                StringBuilder sb = new();
                 if (Oname != null) sb.Append(Oname + " ");
                 else
                 {

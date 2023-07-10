@@ -1,4 +1,6 @@
-﻿namespace EFEntityMgr
+﻿using ClassLibrary1;
+
+namespace EFEntityMgr
 {
     partial class Form1
     {
@@ -28,162 +30,190 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.bsCompany = new System.Windows.Forms.BindingSource(this.components);
-            this.button2 = new System.Windows.Forms.Button();
-            this.bsActs = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mscompidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mscomptypDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mscompseqDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.effDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.feeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.networkaddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.bsCompany)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsActs)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            bsCompany = new BindingSource(components);
+            button2 = new Button();
+            bsActs = new BindingSource(components);
+            dataGridView1 = new DataGridView();
+            codeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            subcodeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            mscompidDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            mscomptypDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            mscompseqDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            dtDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            effDateDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            feeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            networkaddressDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            textBox1 = new TextBox();
+            button1 = new Button();
+            dataGridView2 = new DataGridView();
+            bsaocs = new BindingSource(components);
+            codeDataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            descriptionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)bsCompany).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bsActs).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bsaocs).BeginInit();
+            SuspendLayout();
             // 
             // bsCompany
             // 
-            this.bsCompany.DataSource = typeof(EntitySrvr.Models.Company);
+            bsCompany.DataSource = typeof(EntitySrvr.Models.Company);
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(645, 90);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(250, 44);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Save Activities";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            button2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Location = new Point(645, 90);
+            button2.Name = "button2";
+            button2.Size = new Size(250, 44);
+            button2.TabIndex = 2;
+            button2.Text = "Save Activities";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // bsActs
             // 
-            this.bsActs.DataSource = typeof(EntitySrvr.Models.Activity);
+            bsActs.DataSource = typeof(EntitySrvr.Models.Activity);
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codeDataGridViewTextBoxColumn,
-            this.subcodeDataGridViewTextBoxColumn,
-            this.mscompidDataGridViewTextBoxColumn,
-            this.mscomptypDataGridViewTextBoxColumn,
-            this.mscompseqDataGridViewTextBoxColumn,
-            this.dtDataGridViewTextBoxColumn,
-            this.effDateDataGridViewTextBoxColumn,
-            this.feeDataGridViewTextBoxColumn,
-            this.networkaddressDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.bsActs;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 220);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(972, 341);
-            this.dataGridView1.TabIndex = 3;
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { codeDataGridViewTextBoxColumn, subcodeDataGridViewTextBoxColumn, mscompidDataGridViewTextBoxColumn, mscomptypDataGridViewTextBoxColumn, mscompseqDataGridViewTextBoxColumn, dtDataGridViewTextBoxColumn, effDateDataGridViewTextBoxColumn, feeDataGridViewTextBoxColumn, networkaddressDataGridViewTextBoxColumn });
+            dataGridView1.DataSource = bsActs;
+            dataGridView1.Location = new Point(12, 158);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(972, 199);
+            dataGridView1.TabIndex = 3;
             // 
             // codeDataGridViewTextBoxColumn
             // 
-            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
-            this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
-            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
+            codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
+            codeDataGridViewTextBoxColumn.HeaderText = "Code";
+            codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
             // 
             // subcodeDataGridViewTextBoxColumn
             // 
-            this.subcodeDataGridViewTextBoxColumn.DataPropertyName = "Subcode";
-            this.subcodeDataGridViewTextBoxColumn.HeaderText = "Subcode";
-            this.subcodeDataGridViewTextBoxColumn.Name = "subcodeDataGridViewTextBoxColumn";
+            subcodeDataGridViewTextBoxColumn.DataPropertyName = "Subcode";
+            subcodeDataGridViewTextBoxColumn.HeaderText = "Subcode";
+            subcodeDataGridViewTextBoxColumn.Name = "subcodeDataGridViewTextBoxColumn";
             // 
             // mscompidDataGridViewTextBoxColumn
             // 
-            this.mscompidDataGridViewTextBoxColumn.DataPropertyName = "Mscompid";
-            this.mscompidDataGridViewTextBoxColumn.HeaderText = "Mscompid";
-            this.mscompidDataGridViewTextBoxColumn.Name = "mscompidDataGridViewTextBoxColumn";
+            mscompidDataGridViewTextBoxColumn.DataPropertyName = "Mscompid";
+            mscompidDataGridViewTextBoxColumn.HeaderText = "Mscompid";
+            mscompidDataGridViewTextBoxColumn.Name = "mscompidDataGridViewTextBoxColumn";
             // 
             // mscomptypDataGridViewTextBoxColumn
             // 
-            this.mscomptypDataGridViewTextBoxColumn.DataPropertyName = "Mscomptyp";
-            this.mscomptypDataGridViewTextBoxColumn.HeaderText = "Mscomptyp";
-            this.mscomptypDataGridViewTextBoxColumn.Name = "mscomptypDataGridViewTextBoxColumn";
+            mscomptypDataGridViewTextBoxColumn.DataPropertyName = "Mscomptyp";
+            mscomptypDataGridViewTextBoxColumn.HeaderText = "Mscomptyp";
+            mscomptypDataGridViewTextBoxColumn.Name = "mscomptypDataGridViewTextBoxColumn";
             // 
             // mscompseqDataGridViewTextBoxColumn
             // 
-            this.mscompseqDataGridViewTextBoxColumn.DataPropertyName = "Mscompseq";
-            this.mscompseqDataGridViewTextBoxColumn.HeaderText = "Mscompseq";
-            this.mscompseqDataGridViewTextBoxColumn.Name = "mscompseqDataGridViewTextBoxColumn";
+            mscompseqDataGridViewTextBoxColumn.DataPropertyName = "Mscompseq";
+            mscompseqDataGridViewTextBoxColumn.HeaderText = "Mscompseq";
+            mscompseqDataGridViewTextBoxColumn.Name = "mscompseqDataGridViewTextBoxColumn";
             // 
             // dtDataGridViewTextBoxColumn
             // 
-            this.dtDataGridViewTextBoxColumn.DataPropertyName = "Dt";
-            this.dtDataGridViewTextBoxColumn.HeaderText = "Dt";
-            this.dtDataGridViewTextBoxColumn.Name = "dtDataGridViewTextBoxColumn";
+            dtDataGridViewTextBoxColumn.DataPropertyName = "Dt";
+            dtDataGridViewTextBoxColumn.HeaderText = "Dt";
+            dtDataGridViewTextBoxColumn.Name = "dtDataGridViewTextBoxColumn";
             // 
             // effDateDataGridViewTextBoxColumn
             // 
-            this.effDateDataGridViewTextBoxColumn.DataPropertyName = "EffDate";
-            this.effDateDataGridViewTextBoxColumn.HeaderText = "EffDate";
-            this.effDateDataGridViewTextBoxColumn.Name = "effDateDataGridViewTextBoxColumn";
+            effDateDataGridViewTextBoxColumn.DataPropertyName = "EffDate";
+            effDateDataGridViewTextBoxColumn.HeaderText = "EffDate";
+            effDateDataGridViewTextBoxColumn.Name = "effDateDataGridViewTextBoxColumn";
             // 
             // feeDataGridViewTextBoxColumn
             // 
-            this.feeDataGridViewTextBoxColumn.DataPropertyName = "Fee";
-            this.feeDataGridViewTextBoxColumn.HeaderText = "Fee";
-            this.feeDataGridViewTextBoxColumn.Name = "feeDataGridViewTextBoxColumn";
+            feeDataGridViewTextBoxColumn.DataPropertyName = "Fee";
+            feeDataGridViewTextBoxColumn.HeaderText = "Fee";
+            feeDataGridViewTextBoxColumn.Name = "feeDataGridViewTextBoxColumn";
             // 
             // networkaddressDataGridViewTextBoxColumn
             // 
-            this.networkaddressDataGridViewTextBoxColumn.DataPropertyName = "Networkaddress";
-            this.networkaddressDataGridViewTextBoxColumn.HeaderText = "Networkaddress";
-            this.networkaddressDataGridViewTextBoxColumn.Name = "networkaddressDataGridViewTextBoxColumn";
+            networkaddressDataGridViewTextBoxColumn.DataPropertyName = "Networkaddress";
+            networkaddressDataGridViewTextBoxColumn.HeaderText = "Networkaddress";
+            networkaddressDataGridViewTextBoxColumn.Name = "networkaddressDataGridViewTextBoxColumn";
             // 
             // textBox1
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsCompany, "Name", true));
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(61, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(819, 33);
-            this.textBox1.TabIndex = 4;
+            textBox1.DataBindings.Add(new Binding("Text", bsCompany, "Name", true));
+            textBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox1.Location = new Point(61, 27);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(819, 33);
+            textBox1.TabIndex = 4;
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(373, 90);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 44);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Save Company";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(373, 90);
+            button1.Name = "button1";
+            button1.Size = new Size(250, 44);
+            button1.TabIndex = 5;
+            button1.Text = "Save Company";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView2.AutoGenerateColumns = false;
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { codeDataGridViewTextBoxColumn1, descriptionDataGridViewTextBoxColumn });
+            dataGridView2.DataSource = bsaocs;
+            dataGridView2.Location = new Point(12, 384);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowTemplate.Height = 25;
+            dataGridView2.Size = new Size(972, 199);
+            dataGridView2.TabIndex = 6;
+            // 
+            // bsaocs
+            // 
+            bsaocs.DataSource = typeof(DataSet1.aocDataTable);
+            // 
+            // codeDataGridViewTextBoxColumn1
+            // 
+            codeDataGridViewTextBoxColumn1.DataPropertyName = "Code";
+            codeDataGridViewTextBoxColumn1.HeaderText = "Code";
+            codeDataGridViewTextBoxColumn1.Name = "codeDataGridViewTextBoxColumn1";
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            descriptionDataGridViewTextBoxColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            descriptionDataGridViewTextBoxColumn.Width = 92;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(996, 573);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button2);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bsCompany)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsActs)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(996, 622);
+            Controls.Add(dataGridView2);
+            Controls.Add(button1);
+            Controls.Add(textBox1);
+            Controls.Add(dataGridView1);
+            Controls.Add(button2);
+            Name = "Form1";
+            Text = "Form1";
+            Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)bsCompany).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bsActs).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bsaocs).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -203,5 +233,9 @@
         private DataGridViewTextBoxColumn networkaddressDataGridViewTextBoxColumn;
         private TextBox textBox1;
         private Button button1;
+        private DataGridView dataGridView2;
+        private BindingSource bsaocs;
+        private DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
     }
 }

@@ -3,14 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:EFEntityWPF"
+        xmlns:local="clr-namespace:EFEntityWPF" xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Canvas Margin="0,0,0,0">
         <TextBox x:Name="tCompany" Canvas.Left="78" TextWrapping="Wrap" Text="{Binding Name}" Canvas.Top="47" Width="602" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Height="35" IsEnabled="True"/>
-        <Button x:Name="boffSave" Content="Save" Canvas.Left="80" Canvas.Top="370" FontWeight="Bold" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Width="111" Click="boffSave_Click"/>
+        <Button x:Name="boffSave" Content="Save" Canvas.Left="80" Canvas.Top="399" FontWeight="Bold" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Top" Width="111" Click="boffSave_Click"/>
         <Button x:Name="bReset" Content="Reread Data" Canvas.Left="244" Canvas.Top="100" FontWeight="Bold" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Top" Width="111" Click="button_Click"/>
-        <DataGrid x:Name="dataGrid" Height="200" Width="683" Canvas.Left="78" Canvas.Top="150" HorizontalAlignment="Left" FontWeight="Bold" FontSize="12" CanUserAddRows="False" VerticalAlignment="Center" AutoGenerateColumns="false">
+        <DataGrid x:Name="dataGrid" Height="189" Width="683" Canvas.Left="78" Canvas.Top="150" HorizontalAlignment="Center" FontWeight="Bold" FontSize="12" CanUserAddRows="False" VerticalAlignment="Top" AutoGenerateColumns="false">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="First Name"  Binding="{Binding Fname}"/>
                 <DataGridTextColumn Header="Last Name" Binding="{Binding Lname}" />
@@ -20,8 +20,10 @@
                 <DataGridTextColumn Header="Type" d:IsReadOnly="true" Binding="{Binding Office}" />
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="bSave_Copy" Content="Save" Canvas.Left="78" Canvas.Top="100" FontWeight="Bold" FontSize="14" Width="111" Click="boffSave_Click" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="2.839,-11.67"/>
-        <Button x:Name="boffSave_Copy" Content="New Officer" Canvas.Left="244" Canvas.Top="370" FontWeight="Bold" FontSize="14" Width="111" Click="bNewOff_Click" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <Button x:Name="bOffDel" Content="Delete Officer" Canvas.Left="379" Canvas.Top="370" FontWeight="Bold" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Click="bOffDel_Click"/>
+        <TextBox x:Name="tFullname" IsReadOnly="true" Canvas.Left="80" TextWrapping="Wrap" Text="{Binding FullName,Mode=OneWay}" Canvas.Top="356" Width="602" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Height="23" IsEnabled="True"/>
+        <Button x:Name="bSave_Copy" Content="Save" Canvas.Left="244" Canvas.Top="300" FontWeight="Bold" FontSize="14" Width="111" Click="boffSave_Click" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="2.839,-11.67"/>
+        <Button x:Name="boffSave_Copy" Content="New Officer" Canvas.Left="244" Canvas.Top="399" FontWeight="Bold" FontSize="14" Width="111" Click="bNewOff_Click" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Button x:Name="bOffDel" Content="Delete Officer" Canvas.Left="379" Canvas.Top="399" FontWeight="Bold" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Top" Width="111" Click="bOffDel_Click"/>
+        <dxlc:DockLayoutControl x:Name="DC1" />
     </Canvas>
 </Window>

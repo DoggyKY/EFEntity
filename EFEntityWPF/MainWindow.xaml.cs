@@ -39,11 +39,22 @@ namespace EFEntityWPF
             ctx = new();
             ctxoff = new();
             SetupCompany();
-         }
+            //this.Dispatcher.Invoke((System.Action)delegate { DP1.Children.Clear(); }, null);  // To Clear the Doc panel
+            DC1.Height = 200;
+            var UC = new UC1()  ;
+            DC1.Children.Add(UC) ;
+            UC = new UC1();
+ 
+            DC1.Children.Add(UC);
+ //          DockPanel.SetDock(UC, Dock.Top);
+
+        }
 
         private async void bSave_Click(object sender, RoutedEventArgs e)
         {
-            await ctx.SaveChangesAsync(new Audit());
+            var aud = new Audit();
+            await ctx.SaveChangesAsync(aud);
+//            MessageBox.Show(aud.Entries.ToString());
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -53,7 +64,9 @@ namespace EFEntityWPF
 
         private async void boffSave_Click(object sender, RoutedEventArgs e)
         {
-            await ctxoff.SaveChangesAsync(new Audit());
+            var aud = new Audit();
+            await ctxoff.SaveChangesAsync(aud);
+            if (aud.Entries.Count > 0) MessageBox.Show(aud.Entries[0].Entry.ToString());
         }
         private void bNewOff_Click(object sender, RoutedEventArgs e)
         {
@@ -75,11 +88,11 @@ namespace EFEntityWPF
          }
         async void SetupCompany()
         {
-           bgrr = await GetCompanyByFileID(ctx, "0062584", "09", "99999");
+            bgrr = await GetCompanyByFileID(ctx, "0062584", "09", "99999");
             
             offs = new(await GetOfficersByEntity(ctxoff,  bgrr));
             this.DataContext = bgrr;
-            dataGrid.DataContext = offs;
+            tFullname.DataContext =   dataGrid.DataContext = offs;
             dataGrid.ItemsSource = offs;
         }
     }
